@@ -59,31 +59,31 @@ function draw() {
       if (r > 0.5) {
         line(line_startX,line_startY, line_startX - delta, line_startY) ;
        } else {
-         line(line_startX, line_startY+10, line_startX + delta, line_startY+10)
+         line(line_startX, line_startY+10, line_startX + delta, line_startY+10) ;
        }
     }
     
   }
    // 모음으로 만든 패턴 
-  for (line_startY = windowHeight / 2 + 10 ; line_startY < windowHeight / 2 + 230 ; line_startY += 20) {
-    for( line_startX = windowWidth/2 ; line_startX < windowWidth ; line_startX += 10) {
+  for (line_startY = windowHeight / 2 + 10 ; line_startY < windowHeight - 100 ; line_startY += 20) {
+    for( line_startX = windowWidth/2 ; line_startX < windowWidth  ; line_startX += 10) {
       strokeWeight(2);
       line(line_startX, line_startY, line_startX, line_startY + 10);
       var r = random(0,1) ;
       if (r > 0.5) {
         line(line_startX,line_startY+5, line_startX - delta, line_startY+5) ;
        } else {
-         line(line_startX, line_startY+5, line_startX + delta, line_startY+5)
+         line(line_startX, line_startY+5, line_startX + delta, line_startY+5) ;
          
        }
     }
   }
   // 해와 달
-  noStroke()
-  fill(255,0,0)
-  ellipse(windowWidth - 100, windowHeight/4, mouseX/3, mouseX/3)
-  fill(255)
-  ellipse(windowWidth/4, windowHeight - 100, mouseY/3, mouseY/3)
+  noStroke() ;
+  fill(255,0,0);
+  ellipse(windowWidth - 350, windowHeight/4, mouseX/4, mouseX/4);
+  fill(255);
+  ellipse(windowWidth/4, windowHeight - 200, mouseY/3, mouseY/3) ;
   
   
 
